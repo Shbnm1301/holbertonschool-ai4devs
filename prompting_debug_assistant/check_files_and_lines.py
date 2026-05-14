@@ -1,3 +1,5 @@
+print("SCRIPT STARTED")
+
 import os
 
 folder = "bug_snippets"
