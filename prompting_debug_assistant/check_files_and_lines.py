@@ -1,6 +1,6 @@
 import os
 
-folder = "bug_snippets"
+folder = os.path.join(os.path.dirname(__file__), "bug_snippets")
 
 files = os.listdir(folder)
 files = [f for f in files if f.endswith((".py", ".js", ".java"))]
