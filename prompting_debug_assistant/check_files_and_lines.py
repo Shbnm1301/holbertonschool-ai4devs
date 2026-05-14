@@ -1,14 +1,12 @@
-
 import os
 
-
-folder = os.path.join(os.path.dirname(__file__), "bug_snippets")
+base_dir = os.getcwd()
+folder = os.path.join(base_dir, "bug_snippets")
 
 files = os.listdir(folder)
 files = [f for f in files if f.endswith((".py", ".js", ".java"))]
 
 print("Number of files:", len(files))
-print()
 
 for file in files:
     path = os.path.join(folder, file)
