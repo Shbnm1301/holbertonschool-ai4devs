@@ -1,8 +1,8 @@
-print("SCRIPT STARTED")
 
 import os
 
-folder = "bug_snippets"
+
+folder = os.path.join(os.path.dirname(__file__), "bug_snippets")
 
 files = os.listdir(folder)
 files = [f for f in files if f.endswith((".py", ".js", ".java"))]
@@ -13,7 +13,5 @@ print()
 for file in files:
     path = os.path.join(folder, file)
 
-    with open(path, "r") as f:
-        lines = len(f.readlines())
-
-    print(file, "->", lines, "lines")
+    with open(path, "r", encoding="utf-8", errors="ignore") as f:
+        print(file, "->", len(f.readlines()), "lines")
